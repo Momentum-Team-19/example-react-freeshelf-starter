@@ -5,9 +5,15 @@ function App() {
   return (
     <div>
       <h1>Freeshelf</h1>
-      {/* Use bookData to show books on the page*/}
+      {bookData.map((book) => (
+        <Book title={book.title} />
+      ))}
     </div>
   )
+}
+
+function Book({ title }) {
+  return <p>{title}</p>
 }
 
 export default App
